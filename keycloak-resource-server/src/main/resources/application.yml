@@ -1,0 +1,10 @@
+server:
+  port: 8081
+keycloak:
+  auth-server-url: http://idm.saartha.net:8080/auth
+  realm: business-on-maps
+  resource: resource
+  public-client : true
+logging:
+  level:
+    org.springframework.security.web: debug

@@ -1,0 +1,17 @@
+zuul:
+  strip-prefix: false
+  sensitive-headers: Cookie,Set-Cookie
+  routes:
+    ui:
+      url: http://localhost:8082
+    resource:
+      path : /resource/**
+      url: http://localhost:8081
+keycloak:
+  auth-server-url: http://idm.saartha.net:8080/auth
+  realm: business-on-maps
+  resource: resource
+  public-client : true
+logging:
+  level:
+    org.springframework.security.web: debug
